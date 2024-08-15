@@ -5,8 +5,8 @@ public class CombinationSumI {
     public static void main(String[] args) 
     {
        
-        int[] nums = {1};
-        int n = 2;
+        int[] nums = {2,3,6,7};
+        int n = 7;
         System.out.println(combinationSum(nums,n));
     }
 

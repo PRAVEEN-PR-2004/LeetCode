@@ -14,16 +14,16 @@ public class CombinationSum2 {
             return result;
         }
         Arrays.sort(arr); 
-        findCombinations(0, target, arr, new ArrayList<>(), result);
+        findCombinations(0,0, target, arr, new ArrayList<>(), result);
         return result;
     }
 
-    public static void findCombinations(int index, int target, int[] arr, ArrayList<Integer> current, List<List<Integer>> result) {
-        if (target == 0) {
+    public static void findCombinations(int index,int sum, int target, int[] arr, ArrayList<Integer> current, List<List<Integer>> result) {
+        if (target == sum) {
             result.add(new ArrayList<>(current));
             return;
         }
-        if (target < 0) {
+        if (target < sum) {
             return;
         }
 
@@ -32,7 +32,7 @@ public class CombinationSum2 {
                 continue; 
             }
             current.add(arr[i]);
-            findCombinations(i + 1, target - arr[i], arr, current, result); 
+            findCombinations(i + 1, sum + arr[i],target, arr, current, result); 
             current.remove(current.size() - 1); 
         }
     }
