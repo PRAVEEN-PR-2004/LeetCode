@@ -38,7 +38,7 @@ public class LetterCom {
 
     public static void main(String[] args) {
         LetterCom sol = new LetterCom();
-        String digits = "23"; // You can modify this input to test other cases
+        String digits = "23"; 
         List<String> result = sol.letterCombinations(digits);
         System.out.println("Combination: " + result);
     }
