@@ -4,7 +4,7 @@ public class PermutationNumber {
     {
         int[] arr = {1,2,3};
         List<List<Integer>> aa  = permutation(arr);
-        for(List a:aa)
+        for(List<Integer> a:aa)
         {
             System.out.print(a+" ");
         }
